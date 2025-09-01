@@ -380,7 +380,8 @@ local function set_groups()
     GitSignsCurrentLineBlame = { fg = colors.gutter_normal, italic = true },
   }
 
-  groups = vim.tbl_deep_extend('force', groups, type(config.overrides) == 'function' and config.overrides() or config.overrides)
+  groups = vim.tbl_deep_extend('force', groups,
+    type(config.overrides) == 'function' and config.overrides() or config.overrides)
 
   for group, parameters in pairs(groups) do
     vim.api.nvim_set_hl(0, group, parameters)
