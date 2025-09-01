@@ -11,7 +11,7 @@ local colors = {
 function colors.generate(mirage)
   if vim.o.background == 'dark' then
     if mirage then
-      colors.accent = '#AB4566'
+      colors.accent = '#FFCC66'
       colors.bg = '#1F2430'
       colors.fg = '#CCCAC2'
       colors.ui = '#707A8C'
@@ -93,8 +93,9 @@ function colors.generate(mirage)
       colors.fg_idle = '#565B66'
       colors.warning = '#FF8F40'
     end
+    -- my changes
   else
-    colors.accent = '#AEBD74'
+    colors.accent = '#AB4566b'
     colors.bg = '#F8F9FA'
     colors.fg = '#5C6166'
     colors.ui = '#8A9199'
